@@ -1,6 +1,11 @@
+const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({
+  transpileDependencies: true,
+  runtimeCompiler: true,
+  resolve: {
+    alias: {
+       vue: 'vue/dist/vue.js'
+    }
+  }
 
-module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/VueJS/' 
-    : '/'
-}
+})
